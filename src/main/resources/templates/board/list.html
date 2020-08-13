@@ -32,7 +32,7 @@
         <tbody>
         <tr th:each="board : ${boardList}">
             <td>
-                <span th:text="${board.id}"></span>
+                <span th:text="${boardStat.index + 1}"></span>
             </td>
             <td>
                 <a th:href="@{'/post/' + ${board.id}}">
