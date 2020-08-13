@@ -4,9 +4,6 @@ import com.lim.bulletinboard.domain.entity.BoardEntity;
 import com.lim.bulletinboard.domain.repository.BoardRepository;
 import com.lim.bulletinboard.dto.BoardDto;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +14,7 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 public class BoardService {
-    BoardRepository boardRepository;
+    private BoardRepository boardRepository;
 
     @Transactional
     public long savePost(BoardDto boardDto) {
@@ -41,11 +38,17 @@ public class BoardService {
     @Transactional
     public BoardDto getPost(Long id) {
         Optional<BoardEntity> boardEntityWrapper = boardRepository.findById(id);
-        BoardEntity boardEntity = boardEntityWrapper.get();
+        BoardEntity boardEntity = BoardEntity.builder()
+                .id((long) 0)
+                .writer("")
+                .title("")
+                .content("").build();
 
-        BoardDto boardDTO = this.convertEntityToDto(boardEntity);
+        if (boardEntityWrapper.isPresent()) {
+            boardEntity = boardEntityWrapper.get();
+        }
 
-        return boardDTO;
+        return this.convertEntityToDto(boardEntity);
     }
 
     @Transactional
