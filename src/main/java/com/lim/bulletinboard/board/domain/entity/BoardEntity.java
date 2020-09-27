@@ -1,4 +1,4 @@
-package com.lim.bulletinboard.domain.entity;
+package com.lim.bulletinboard.board.domain.entity;
 
 import lombok.AccessLevel;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package com.lim.bulletinboard.domain.repository;
+package com.lim.bulletinboard.board.domain.repository;
 
-import com.lim.bulletinboard.domain.entity.BoardEntity;
+import com.lim.bulletinboard.board.domain.entity.BoardEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

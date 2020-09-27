@@ -1,6 +1,6 @@
-package com.lim.bulletinboard.dto;
+package com.lim.bulletinboard.board.dto;
 
-import com.lim.bulletinboard.domain.entity.BoardEntity;
+import com.lim.bulletinboard.board.domain.entity.BoardEntity;
 import lombok.*;
 
 import java.time.LocalDateTime;

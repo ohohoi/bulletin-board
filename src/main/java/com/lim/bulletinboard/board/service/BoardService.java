@@ -1,8 +1,8 @@
-package com.lim.bulletinboard.service;
+package com.lim.bulletinboard.board.service;
 
-import com.lim.bulletinboard.domain.entity.BoardEntity;
-import com.lim.bulletinboard.domain.repository.BoardRepository;
-import com.lim.bulletinboard.dto.BoardDto;
+import com.lim.bulletinboard.board.domain.entity.BoardEntity;
+import com.lim.bulletinboard.board.domain.repository.BoardRepository;
+import com.lim.bulletinboard.board.dto.BoardDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

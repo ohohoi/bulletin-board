@@ -1,7 +1,7 @@
-package com.lim.bulletinboard.controller;
+package com.lim.bulletinboard.board.controller;
 
-import com.lim.bulletinboard.dto.BoardDto;
-import com.lim.bulletinboard.service.BoardService;
+import com.lim.bulletinboard.board.dto.BoardDto;
+import com.lim.bulletinboard.board.service.BoardService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
